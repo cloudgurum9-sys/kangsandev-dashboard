@@ -145,7 +145,7 @@ elif menu == "📊 1. 공사 원가/증빙 대사":
         def color_error(val):
             return 'color: red; font-weight: bold' if val != '정상 (금액 일치)' else ''
             
-        st.dataframe(display_df.style.applymap(color_error, subset=['검증결과']), use_container_width=True)
+        st.dataframe(display_df.style.map(color_error, subset=['검증결과']), use_container_width=True)
 
 elif menu == "💳 2. 법인카드 리스크 모니터링":
     st.title("💳 현장 법인카드 리스크 모니터링")
